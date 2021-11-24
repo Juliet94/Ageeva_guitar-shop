@@ -1,0 +1,56 @@
+@import-normalize;
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Droid-sans';
+  font-display: swap;
+  src: url('../../assets/fonts/roboto-regular.woff2') format('woff2'),
+  url('../../assets/fonts/roboto-regular.woff') format('woff');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:global(.visually-hidden) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  min-width: 1020px;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Droid-sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
