@@ -1,7 +1,11 @@
 import React from 'react';
+import './app.module.scss';
+import {Catalog} from '../pages/catalog/catalog';
 
 function App() {
-  return <p>Hello, world!</p>;
+  return (
+    <Catalog />
+  );
 }
 
 export default App;
