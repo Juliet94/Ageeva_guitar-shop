@@ -4,3 +4,36 @@
   min-height: 100vh;
   grid-template-columns: 100%;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading_wrapper {
+  max-width: 1020px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -60px;
+  margin-bottom: 30px;
+  padding-left: 40px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
+
+.inner {
+  max-width: 1020px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 34px;
+  padding: 0 40px 40px;
+}

@@ -1,0 +1,124 @@
+.heading {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 0;
+  letter-spacing: 0.05em;
+
+  &_filter {
+    margin-bottom: 28px;
+  }
+
+  &_price {
+    margin-bottom: 23px;
+  }
+
+  &_type {
+    letter-spacing: 0.03em;
+    margin-bottom: 26px;
+  }
+
+  &_strings {
+    letter-spacing: 0.02em;
+    margin-bottom: 26px;
+  }
+}
+
+.price_wrapper {
+  border-top: 0.7px solid var(--very-light-grey);
+  border-bottom: 0.7px solid var(--very-light-grey);
+  padding: 31px 0 29px;
+}
+
+.price_input_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 1px;
+    background-color: #585757;
+    left: 97px;
+    top: 13px;
+  }
+}
+
+.price_input {
+  border: 0.7px solid var(--lightest-grey);
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+  width: 84px;
+  height: 28px;
+  text-align: center;
+
+  &::placeholder {
+    opacity: 0.6;
+  }
+}
+
+.type_wrapper {
+  padding: 31px 0 14px;
+  border-bottom: 0.7px solid var(--very-light-grey);
+}
+
+.list_item {
+  margin-bottom: 18px;
+}
+
+
+.text {
+  position: relative;
+  font-size: 16px;
+  margin-left: 40px;
+  letter-spacing: 0.03em;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: -40px;
+    top: -1px;
+    border: 0.7px solid var(--lightest-grey);
+    border-radius: 2px;
+    transition: border-color 0.25s ease-out;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &::before {
+      border-color: var(--slightly-light-grey);
+    }
+  }
+
+  &:active {
+
+    &::before {
+      border-color: var(--grey);
+    }
+  }
+}
+
+.checkbox:checked + .text::before {
+  background-image: url('../../assets/images/checkbox-checked.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox:disabled + .text {
+  cursor: default;
+  color: #dddddd;
+
+  &::before {
+    border-color: #dddddd;
+    background-color: #f7f3f3;
+  }
+}
+
+
+.strings_wrapper {
+  padding-top: 31px;
+}

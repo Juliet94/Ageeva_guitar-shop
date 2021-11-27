@@ -1,0 +1,44 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.list_item {
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.button {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 0.7px solid var(--lightest-grey);
+  border-radius: 2px;
+  background-color: transparent;
+  transition: color 0.25s ease-out,
+              background-color 0.25s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #585757;
+  }
+
+  &_prev {
+    width: 80px;
+    margin-right: 14px;
+  }
+
+  &_next {
+    width: 80px;
+    margin-left: 14px;
+  }
+
+  &_active {
+    color: #ffffff;
+    background-color: #585757;
+  }
+}

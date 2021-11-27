@@ -1,14 +1,19 @@
 @import-normalize;
 
 :root {
+  --lightest-grey: #9f9e9e;
+  --very-light-grey: #dddada;
   --light-grey: rgba(30, 9, 6, 0.15);
+  --slightly-light-grey: #585757;
   --grey: #c1c1c1;
   --dark-grey: #3f3f3f;
   --darkest-grey: #474747;
 
+  --light-orange: #ffa839;
   --orange: #e27f00;
+  --dark-orange: #da8b26;
 
-  --red : #F20505;
+  --red : #f20505;
 }
 
 @font-face {
