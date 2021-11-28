@@ -19,7 +19,7 @@ export default function Breadcrumbs({isCart = false}) {
             Каталог
           </Link>
         </li>
-        {isCart && 
+        {isCart &&
         <li>
           <Link className={(styles.link)} to={AppRoute.CART}>
             Оформляем
@@ -32,4 +32,4 @@ export default function Breadcrumbs({isCart = false}) {
 
 Breadcrumbs.propTypes = {
   isCart: PropTypes.bool,
-}
+};
