@@ -3,7 +3,7 @@ import styles from './order.module.scss';
 
 export default function Order() {
   return (
-    <div className={wrapper}>
+    <div className={styles.wrapper}>
       <span className={styles.price}>
         Всего: 47 000 ₽
       </span>

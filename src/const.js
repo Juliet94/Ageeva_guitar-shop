@@ -11,7 +11,7 @@ export const SortOrder = {
 export const AppRoute = {
   CATALOG: '/catalog',
   CART: '/cart',
-}
+};
 
 export const GUITARS_PER_PAGE = 9;
 

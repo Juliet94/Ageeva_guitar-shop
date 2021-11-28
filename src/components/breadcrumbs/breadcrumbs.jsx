@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import cn from 'classnames';
 import {AppRoute} from '../../const';
@@ -18,7 +19,8 @@ export default function Breadcrumbs({isCart = false}) {
             Каталог
           </Link>
         </li>
-        {isCart && <li>
+        {isCart && 
+        <li>
           <Link className={(styles.link)} to={AppRoute.CART}>
             Оформляем
           </Link>
@@ -26,4 +28,8 @@ export default function Breadcrumbs({isCart = false}) {
       </ul>
     </div>
   );
+}
+
+Breadcrumbs.propTypes = {
+  isCart: PropTypes.bool,
 }

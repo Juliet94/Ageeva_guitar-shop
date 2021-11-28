@@ -10,24 +10,24 @@ import Order from '../order/order';
 
 export default function Cart() {
   return (
-  <div className={styles.wrapper}>
-    <Header />
-    <main className={styles.main}>
-      <div className={styles.heading_wrapper}>
-        <h1 className={styles.heading}>
-          Корзина
-        </h1>
-        <Breadcrumbs isCart />
-      </div>
-      <section className={styles.section}>
-        <CartList />
-        <div className={styles.promo_wrapper}>
-          <Promo />
-          <Order />
+    <div className={styles.wrapper}>
+      <Header />
+      <main className={styles.main}>
+        <div className={styles.heading_wrapper}>
+          <h1 className={styles.heading}>
+            Корзина
+          </h1>
+          <Breadcrumbs isCart />
         </div>
-      </section>
-    </main>
-    <Footer />
-  </div>
+        <section className={styles.section}>
+          <CartList />
+          <div className={styles.promo_wrapper}>
+            <Promo />
+            <Order />
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }

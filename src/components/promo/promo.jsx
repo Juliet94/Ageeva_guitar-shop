@@ -23,8 +23,7 @@ export default function Promo() {
         >
           Применить купон
         </button>
-        </form>
-      </div>
+      </form>
     </div>
   );
 }
