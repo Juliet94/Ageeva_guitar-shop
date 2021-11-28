@@ -7,7 +7,7 @@ import Breadcrumbs from '../../breadcrumbs/breadcrumbs';
 import Filter from '../../filter/filter';
 import GuitarCatalog from '../../guitar-catalog/guitar-catalog';
 
-export function Catalog() {
+export default function Catalog() {
   return (
     <div className={styles.wrapper}>
       <Header />
