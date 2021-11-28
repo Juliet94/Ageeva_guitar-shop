@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.text {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.input {
+  text-transform: uppercase;
+  min-width: 170px;
+  min-height: 36px;
+  border: 2px solid var(--very-light-grey);
+  border-radius: 2px;
+}
+
+.button {
+  display: block;
+  min-width: 200px;
+  min-height: 36px;
+  background-color: var(--grey);
+  color: #ffffff;
+  border-radius: 2px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
