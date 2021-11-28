@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './cart-list.module.scss';
+// import styles from './cart-list.module.scss';
 import CartListItem from '../cart-list-item/cart-list-item';
 
 export default function CartList() {
