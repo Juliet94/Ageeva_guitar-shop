@@ -1,0 +1,44 @@
+import React from 'react';
+
+export default function CartListItem() {
+  return (
+    <li>
+      <button 
+        type="button"
+      />
+      <img alt="Гитара" />
+      <div>
+        <h2>
+        Электрогитара
+        </h2>
+        <span>
+          Артикул: 
+        </span
+        <span>
+          Электрогитара, 6 струнная
+        </span>
+      </div>
+      <div>
+        <span>
+          17 500 ₽
+        </span>
+      </div>
+      <div>
+        <button
+          type="button"
+        />
+        <span>
+          1
+        </span
+        <button
+          type="button"
+        />
+      </div>
+      <div>
+        <span>
+          17 500 ₽
+        </span>
+      </div>
+    </li>
+  )
+}

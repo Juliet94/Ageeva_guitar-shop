@@ -1,0 +1,39 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100vh;
+  grid-template-columns: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading_wrapper {
+  max-width: 1020px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding-left: 40px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
