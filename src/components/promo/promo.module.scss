@@ -41,4 +41,14 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   padding-left: 12px;
+  transition: background-color 0.25s ease-out;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--slightly-light-grey);
+  }
+
+  &:active {
+    background-color: var(--lightest-grey);
+  }
 }

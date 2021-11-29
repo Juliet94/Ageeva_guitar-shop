@@ -15,7 +15,7 @@ export default function Header() {
           <nav className={styles.nav}>
             <ul className={styles.list}>
               <li className={styles.list_item}>
-                <Link to={AppRoute.CART}>
+                <Link to={AppRoute.CATALOG}>
                   Каталог
                 </Link>
               </li>
