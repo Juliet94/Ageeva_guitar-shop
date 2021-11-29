@@ -1,4 +1,5 @@
 import {getRandomInteger} from './utils';
+import {GuitarType} from './const';
 
 import electricGuitar from './assets/images/electric-guitar.jpg';
 import acousticGuitar from './assets/images/acoustic-guitar.jpg';
@@ -18,6 +19,7 @@ export const guitars = [
     price: 17500,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: electricGuitar,
+    typeFilter: GuitarType.ELECTRIC,
   },
   {
     id: 2,
@@ -29,6 +31,7 @@ export const guitars = [
     price: 29500,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: electricGuitar,
+    typeFilter: GuitarType.ELECTRIC,
   },
   {
     id: 3,
@@ -40,6 +43,7 @@ export const guitars = [
     price: 6800,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: ukulele,
+    typeFilter: GuitarType.UKULELE,
   },
   {
     id: 4,
@@ -51,6 +55,7 @@ export const guitars = [
     price: 30000,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: electricGuitar,
+    typeFilter: GuitarType.ELECTRIC,
   },
   {
     id: 5,
@@ -62,6 +67,7 @@ export const guitars = [
     price: 3500,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: acousticGuitar,
+    typeFilter: GuitarType.ACOUSTIC,
   },
   {
     id: 6,
@@ -73,6 +79,7 @@ export const guitars = [
     price: 15300,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: electricGuitar,
+    typeFilter: GuitarType.ELECTRIC,
   },
   {
     id: 7,
@@ -84,6 +91,7 @@ export const guitars = [
     price: 2200,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: ukulele,
+    typeFilter: GuitarType.UKULELE,
   },
   {
     id: 8,
@@ -95,6 +103,7 @@ export const guitars = [
     price: 30000,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: electricGuitar,
+    typeFilter: GuitarType.ELECTRIC,
   },
   {
     id: 9,
@@ -106,6 +115,7 @@ export const guitars = [
     price: 1700,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: acousticGuitar,
+    typeFilter: GuitarType.ACOUSTIC,
   },
   {
     id: 10,
@@ -117,6 +127,7 @@ export const guitars = [
     price: 23000,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: electricGuitar,
+    typeFilter: GuitarType.ELECTRIC,
   },
   {
     id: 11,
@@ -128,6 +139,7 @@ export const guitars = [
     price: 18700,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: electricGuitar,
+    typeFilter: GuitarType.ELECTRIC,
   },
   {
     id: 12,
@@ -139,6 +151,7 @@ export const guitars = [
     price: 35000,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: electricGuitar,
+    typeFilter: GuitarType.ELECTRIC,
   },
   {
     id: 13,
@@ -150,6 +163,7 @@ export const guitars = [
     price: 14900,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: electricGuitar,
+    typeFilter: GuitarType.ELECTRIC,
   },
   {
     id: 14,
@@ -161,6 +175,7 @@ export const guitars = [
     price: 7600,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: acousticGuitar,
+    typeFilter: GuitarType.ACOUSTIC,
   },
   {
     id: 15,
@@ -172,6 +187,7 @@ export const guitars = [
     price: 6500,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: acousticGuitar,
+    typeFilter: GuitarType.ACOUSTIC,
   },
   {
     id: 16,
@@ -183,6 +199,7 @@ export const guitars = [
     price: 12000,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: acousticGuitar,
+    typeFilter: GuitarType.ACOUSTIC,
   },
   {
     id: 17,
@@ -194,6 +211,7 @@ export const guitars = [
     price: 9900,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: acousticGuitar,
+    typeFilter: GuitarType.ACOUSTIC,
   },
   {
     id: 18,
@@ -205,6 +223,7 @@ export const guitars = [
     price: 8900,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: acousticGuitar,
+    typeFilter: GuitarType.ACOUSTIC,
   },
   {
     id: 19,
@@ -216,6 +235,7 @@ export const guitars = [
     price: 10500,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: acousticGuitar,
+    typeFilter: GuitarType.ACOUSTIC,
   },
   {
     id: 20,
@@ -227,6 +247,7 @@ export const guitars = [
     price: 13300,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: acousticGuitar,
+    typeFilter: GuitarType.ACOUSTIC,
   },
   {
     id: 21,
@@ -238,6 +259,7 @@ export const guitars = [
     price: 4800,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: ukulele,
+    typeFilter: GuitarType.UKULELE,
   },
   {
     id: 22,
@@ -249,6 +271,7 @@ export const guitars = [
     price: 1900,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: ukulele,
+    typeFilter: GuitarType.UKULELE,
   },
   {
     id: 23,
@@ -260,6 +283,7 @@ export const guitars = [
     price: 2500,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: ukulele,
+    typeFilter: GuitarType.UKULELE,
   },
   {
     id: 24,
@@ -271,6 +295,7 @@ export const guitars = [
     price: 3800,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: ukulele,
+    typeFilter: GuitarType.UKULELE,
   },
   {
     id: 25,
@@ -282,6 +307,7 @@ export const guitars = [
     price: 4100,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: ukulele,
+    typeFilter: GuitarType.UKULELE,
   },
   {
     id: 26,
@@ -293,6 +319,7 @@ export const guitars = [
     price: 2700,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: ukulele,
+    typeFilter: GuitarType.UKULELE,
   },
   {
     id: 27,
@@ -304,5 +331,6 @@ export const guitars = [
     price: 6700,
     rating: getRandomInteger(MIN_RATE, MAX_RATE),
     img: ukulele,
+    typeFilter: GuitarType.UKULELE,
   },
 ];

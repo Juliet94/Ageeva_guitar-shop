@@ -18,6 +18,19 @@ export const PopupType = {
   DELETE: 'delete',
 };
 
+export const GuitarType = {
+  ACOUSTIC: 'acoustic',
+  ELECTRIC: 'electric',
+  UKULELE: 'ukulele',
+};
+
+export const GuitarString = {
+  FOUR: 4,
+  SIX: 6,
+  SEVEN: 7,
+  TWELVE: 12,
+};
+
 export const GUITARS_PER_PAGE = 9;
 
 export const DEFAULT_PAGE = 1;
