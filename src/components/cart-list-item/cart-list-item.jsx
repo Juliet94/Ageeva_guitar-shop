@@ -1,15 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from './cart-list-item.module.scss';
 import cn from 'classnames';
 
+import Popup from '../popup/popup';
+
 import guitar from '../../assets/images/electric-guitar-preview.jpg';
+import {PopupType} from '../../const';
+import {getSpaces} from '../../utils';
 
 export default function CartListItem() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style = 'overflow: hidden;';
+    }
+
+    if (!isModalOpen) {
+      document.body.style = 'overflow: visible;';
+    }
+  }, [isModalOpen]);
+
   return (
     <li className={styles.list_item}>
       <button
         className={styles.button_close}
         type="button"
+        onClick={() => setIsModalOpen(true)}
       />
       <img className={styles.img} src={guitar} alt="Гитара" />
       <div className={styles.desc_wrapper}>
@@ -51,6 +68,20 @@ export default function CartListItem() {
           17 500 ₽
         </span>
       </div>
+
+      {isModalOpen && (
+        <Popup
+          popupType={PopupType.DELETE}
+          isOpen={isModalOpen}
+          setIsOpen={setIsModalOpen}
+          img={guitar}
+          name={'Честер Bass'}
+          vendorCode={'SO757575'}
+          type={'Электрогитара'}
+          strings={6}
+          price={getSpaces(17500)}
+        />
+      )}
     </li>
   );
 }
