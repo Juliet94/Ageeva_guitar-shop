@@ -10,7 +10,7 @@ export default function Breadcrumbs({isCart = false}) {
     <div className={styles.wrapper}>
       <ul className={styles.list}>
         <li>
-          <Link className={cn(styles.link, styles.link_arrow)} to="/">
+          <Link className={styles.link} to="/">
             Главная
           </Link>
         </li>
@@ -21,7 +21,7 @@ export default function Breadcrumbs({isCart = false}) {
         </li>
         {isCart &&
         <li>
-          <Link className={(styles.link)} to={AppRoute.CART}>
+          <Link className={cn(styles.link, styles.link_arrow)} to={AppRoute.CART}>
             Оформляем
           </Link>
         </li>}

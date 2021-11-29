@@ -1,3 +1,14 @@
 .list {
-  
+  position: relative;
+  margin: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 940px;
+    height: 0.7px;
+    top: 0;
+    left: 0;
+    background-color: var(--very-light-grey);
+  }
 }

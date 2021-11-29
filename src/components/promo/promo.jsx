@@ -7,10 +7,10 @@ export default function Promo() {
       <h2 className={styles.heading}>
         Промокод на скидку
       </h2>
-      <p>
+      <p className={styles.text}>
         Введите свой промокод, если он у вас есть.
       </p>
-      <form>
+      <form className={styles.form}>
         <label>
           <input
             className={styles.input}

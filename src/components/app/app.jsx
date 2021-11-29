@@ -1,15 +1,15 @@
 import React from 'react';
-import {Switch, Route, BrowserRouter as Router} from 'react-router-dom';
+import {Switch, Route, BrowserRouter} from 'react-router-dom';
 import './app.module.scss';
 
 import {AppRoute} from '../../const';
 
 import Catalog from '../pages/catalog/catalog';
-import Cart from '../cart/cart';
+import Cart from '../pages/cart/cart';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Switch>
         <Route exact path={AppRoute.CATALOG} >
           <Catalog />
@@ -18,7 +18,7 @@ function App() {
           <Cart />
         </Route>
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
 }
 

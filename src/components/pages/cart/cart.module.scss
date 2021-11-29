@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 85px;
 }
 
 .heading_wrapper {
@@ -17,7 +18,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-left: 40px;
 }
 
@@ -26,14 +27,19 @@
   font-weight: 700;
   letter-spacing: 0.03em;
   margin-bottom: 20px;
+  margin-top: -22px;
 }
 
 .section {
   display: flex;
   flex-direction: column;
+  width: 1020px;
+  padding-left: 40px;
+  padding-right: 36px;
 }
 
 .promo_wrapper {
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
 }

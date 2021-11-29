@@ -6,12 +6,18 @@
 .heading {
   font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07em;
+  margin: 2px 0 9px;
 }
 
 .text {
   font-size: 12px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07em;
+  margin: 0 0 20px;
+}
+
+.form {
+  display: flex;
 }
 
 .input {
@@ -20,6 +26,7 @@
   min-height: 36px;
   border: 2px solid var(--very-light-grey);
   border-radius: 2px;
+  margin-right: 32px;
 }
 
 .button {
@@ -32,5 +39,6 @@
   border: none;
   font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  padding-left: 12px;
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './cart.module.scss';
 
-import Header from '../header/header';
-import Footer from '../footer/footer';
-import Breadcrumbs from '../breadcrumbs/breadcrumbs';
-import CartList from '../cart-list/cart-list';
-import Promo from '../promo/promo';
-import Order from '../order/order';
+import Header from '../../header/header';
+import Footer from '../../footer/footer';
+import Breadcrumbs from '../../breadcrumbs/breadcrumbs';
+import CartList from '../../cart-list/cart-list';
+import Promo from '../../promo/promo';
+import Order from '../../order/order';
 
 export default function Cart() {
   return (

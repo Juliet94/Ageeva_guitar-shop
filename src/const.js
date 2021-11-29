@@ -9,7 +9,7 @@ export const SortOrder = {
 };
 
 export const AppRoute = {
-  CATALOG: '/catalog',
+  CATALOG: '/',
   CART: '/cart',
 };
 
