@@ -85,52 +85,56 @@ export default function CartListItem({cartItem}) {
 
   return (
     <li className={styles.list_item}>
-      <button
-        className={styles.button_close}
-        type="button"
-        onClick={() => setIsModalOpen(true)}
-      />
-      <img className={styles.img} src={img} alt="Гитара" />
-      <div className={styles.desc_wrapper}>
-        <h2 className={styles.heading}>
-          {type} {name}
-        </h2>
-        <span className={styles.desc}>
-          Артикул: {vendorCode}
-        </span>
-        <span className={styles.desc}>
-          {type}, {strings} струнная
-        </span>
-      </div>
-      <div className={styles.price_wrapper}>
-        <span className={styles.price}>
-          {getSpaces(price)} ₽
-        </span>
-      </div>
-      <div className={styles.quantity_wrapper}>
+      <div className={styles.wrapper}>
         <button
-          className={cn(styles.button_quantity, styles.button_quantity_minus)}
+          className={styles.button_close}
           type="button"
-          onClick={onMinusButtonClick}
+          onClick={() => setIsModalOpen(true)}
         />
-        <label>
-          <input
-            className={styles.quantity_input}
-            type="text"
-            value={count}
-            onChange={onInputChange}
+        <img className={styles.img} src={img} alt="Гитара" />
+        <div className={styles.desc_wrapper}>
+          <h2 className={styles.heading}>
+            {type} {name}
+          </h2>
+          <span className={styles.desc}>
+            Артикул: {vendorCode}
+          </span>
+          <span className={styles.desc}>
+            {type}, {strings} струнная
+          </span>
+        </div>
+      </div>
+      <div className={styles.wrapper_price_quantity}>
+        <div className={styles.price_wrapper}>
+          <span className={styles.price}>
+            {getSpaces(price)} ₽
+          </span>
+        </div>
+        <div className={styles.quantity_wrapper}>
+          <button
+            className={cn(styles.button_quantity, styles.button_quantity_minus)}
+            type="button"
+            onClick={onMinusButtonClick}
           />
-        </label>
-        <button
-          className={cn(styles.button_quantity, styles.button_quantity_plus)}
-          type="button"
-          onClick={onPlusButtonClick}
-        />
-      </div>
-      <div className={styles.price_wrapper}>
-        <span className={cn(styles.price, styles.price_total)}>
-          {getSpaces(price * count)} ₽
-        </span>
+          <label>
+            <input
+              className={styles.quantity_input}
+              type="text"
+              value={count}
+              onChange={onInputChange}
+            />
+          </label>
+          <button
+            className={cn(styles.button_quantity, styles.button_quantity_plus)}
+            type="button"
+            onClick={onPlusButtonClick}
+          />
+        </div>
+        <div className={styles.price_wrapper}>
+          <span className={cn(styles.price, styles.price_total)}>
+            {getSpaces(price * count)} ₽
+          </span>
+        </div>
       </div>
 
       {isModalOpen && (

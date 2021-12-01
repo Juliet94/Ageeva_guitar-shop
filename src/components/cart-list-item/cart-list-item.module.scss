@@ -1,8 +1,13 @@
 .list_item {
   display: flex;
-  padding: 18px 0 8px;
+  justify-content: space-between;
+  padding: 18px 0 14px;
   border-bottom: 0.7px solid var(--very-light-grey);
   margin-bottom: 4px;
+}
+
+.wrapper {
+  display: flex;
 }
 
 .button_close {
@@ -28,7 +33,6 @@
 .desc_wrapper {
   display: flex;
   flex-direction: column;
-  margin-right: 93px;
 }
 
 .heading {
@@ -44,6 +48,12 @@
   padding-left: 1px;
   letter-spacing: 0.08em;
   margin-bottom: 5px;
+}
+
+.wrapper_price_quantity {
+  display: flex;
+  justify-content: space-between;
+  min-width: 425px;
 }
 
 .price_wrapper {
@@ -62,8 +72,6 @@
 
 .quantity_wrapper {
   display: flex;
-  margin-left: 87px;
-  margin-right: 86px;
   padding-top: 21px;
 }
 
