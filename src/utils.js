@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {GUITARS_PER_PAGE, SortType, SortOrder} from './const';
 
 export const getRandomInteger = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
@@ -31,27 +32,41 @@ export const getSortedGuitars = (guitars, sortType, sortOrder) => {
   return guitars;
 };
 
-export const getFilteredGuitars = (guitars, priceFrom, priceTo, filterType, filterStrings) => {
-  const filteredGuitars = [];
+const getFilteredByPrice = (guitars, priceFrom, priceTo) => {
+  const filteredByPriceGuitars = [];
 
   if (priceFrom && !priceTo) {
-    filteredGuitars.push(guitars.filter((guitar) => guitar.price >= priceFrom));
+    filteredByPriceGuitars.push(guitars.filter((guitar) => guitar.price >= priceFrom));
   }
 
-  if (priceTo && !priceFrom) {
-    filteredGuitars.push(guitars.filter((guitar) => guitar.price <= priceTo));
+  if (!priceFrom && priceTo) {
+    filteredByPriceGuitars.push(guitars.filter((guitar) => guitar.price <= priceTo));
   }
 
   if (priceFrom && priceTo) {
-    filteredGuitars.push(guitars.filter((guitar) => (priceFrom <= guitar.price) && (guitar.price <= priceTo)));
+    filteredByPriceGuitars.push(guitars.filter((guitar) => (priceFrom <= guitar.price) && (guitar.price <= priceTo)));
+  }
+
+  return filteredByPriceGuitars.flat();
+};
+
+export const getFilteredGuitars = (guitars, priceFrom, priceTo, filterType, filterStrings) => {
+  const filteredGuitars = [];
+
+  if ((priceFrom || priceTo) && !(filterType.length !== 0) && !(filterStrings.length !== 0)) {
+    filteredGuitars.push(getFilteredByPrice(guitars, priceFrom, priceTo));
   }
 
   if (filterType.length !== 0) {
-    filteredGuitars.push(guitars.filter((guitar) => filterType.some((filterGuitar) => guitar.typeFilter === filterGuitar)));
+    const filteredType = guitars.filter((guitar) => filterType.some((filterGuitar) => guitar.typeFilter === filterGuitar));
+
+    (priceFrom || priceTo) ? filteredGuitars.push(getFilteredByPrice(filteredType, priceFrom, priceTo)) : filteredGuitars.push(filteredType);
   }
 
   if (filterStrings.length !== 0) {
-    filteredGuitars.push(guitars.filter((guitar) => filterStrings.some((filterGuitar) => guitar.strings === filterGuitar)));
+    const filteredStrings = guitars.filter((guitar) => filterStrings.some((filterGuitar) => guitar.strings === filterGuitar));
+
+    (priceFrom || priceTo) ? filteredGuitars.push(getFilteredByPrice(filteredStrings, priceFrom, priceTo)) : filteredGuitars.push(filteredStrings);
   }
 
   if (!priceFrom && !priceTo && (filterType.length === 0) && (filterStrings.length === 0)) {
