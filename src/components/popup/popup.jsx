@@ -7,12 +7,7 @@ import styles from './popup.module.scss';
 
 import {PopupType} from '../../const';
 
-export default function Popup({popupType, isOpen, setIsOpen, img, name, vendorCode, type, strings, price, setIsModalSuccessOpen}) {
-  const onAddButtonClick = () => {
-    setIsOpen(false);
-    setIsModalSuccessOpen(true);
-  };
-
+export default function Popup({popupType, isOpen, setIsOpen, img, name, vendorCode, type, strings, price, onActionButtonClick}) {
   return (
     <ReactModal
       className={styles.modal}
@@ -56,7 +51,7 @@ export default function Popup({popupType, isOpen, setIsOpen, img, name, vendorCo
             <button
               className={cn(styles.button, styles.button_action)}
               type="button"
-              onClick={onAddButtonClick}
+              onClick={onActionButtonClick}
             >
               {popupType === PopupType.ADD ? 'Добавить в корзину' : 'Удалить товар'}
             </button>
@@ -86,5 +81,5 @@ Popup.propTypes = {
   type: PropTypes.string.isRequired,
   strings: PropTypes.number.isRequired,
   price: PropTypes.string.isRequired,
-  setIsModalSuccessOpen: PropTypes.func,
+  onActionButtonClick: PropTypes.func,
 };

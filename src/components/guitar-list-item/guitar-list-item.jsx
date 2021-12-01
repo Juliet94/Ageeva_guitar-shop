@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {useDispatch} from 'react-redux';
 import PropTypes from 'prop-types';
 import StarRatings from 'react-star-ratings';
 import cn from 'classnames';
@@ -9,8 +10,11 @@ import PopupSuccess from '../popup-success/popup-success';
 
 import {getSpaces} from '../../utils';
 import {PopupType} from '../../const';
+import {addToCart, increaseTotalPrice} from '../../store/actions';
 
 export default function GuitarListItem({guitarItem}) {
+  const dispatch = useDispatch();
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalSuccessOpen, setIsModalSuccessOpen] = useState(false);
 
@@ -34,6 +38,13 @@ export default function GuitarListItem({guitarItem}) {
     type,
     strings,
   } = guitarItem;
+
+  const onAddButtonClick = () => {
+    dispatch(addToCart(guitarItem));
+    dispatch(increaseTotalPrice(price));
+    setIsModalOpen(false);
+    setIsModalSuccessOpen(true);
+  };
 
   return (
     <li className={styles.list_item}>
@@ -85,6 +96,7 @@ export default function GuitarListItem({guitarItem}) {
           strings={strings}
           price={getSpaces(price)}
           setIsModalSuccessOpen={setIsModalSuccessOpen}
+          onActionButtonClick={onAddButtonClick}
         />
       )}
       {isModalSuccessOpen && <PopupSuccess isOpen={isModalSuccessOpen} setIsOpen={setIsModalSuccessOpen} />}

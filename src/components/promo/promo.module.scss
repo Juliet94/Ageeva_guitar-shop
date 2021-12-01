@@ -27,6 +27,7 @@
   border: 2px solid var(--very-light-grey);
   border-radius: 2px;
   margin-right: 32px;
+  text-align: center;
 }
 
 .button {
@@ -51,4 +52,8 @@
   &:active {
     background-color: var(--lightest-grey);
   }
+}
+
+.wrong {
+  color: var(--red);
 }

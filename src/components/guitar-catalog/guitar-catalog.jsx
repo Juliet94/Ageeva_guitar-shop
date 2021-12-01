@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {useSelector} from 'react-redux';
+import styles from './guitar-catalog.module.scss';
 
 import Sort from '../sort/sort';
 import GuitarList from '../guitar-list/guitar-list';
@@ -29,8 +30,10 @@ export default function GuitarCatalog() {
   return (
     <div>
       <Sort activeSortType={activeSortType} setActiveSortType={setActiveSortType} activeSortOrder={activeSortOrder} setActiveSortOrder={setActiveSortOrder} />
-      <GuitarList guitars={paginatedGuitars} />
-      <Pagination totalPages={totalPages} activePage={activePage} setActivePage={setActivePage} />
+      {paginatedGuitars.length === 0 ? (
+        <p className={styles.none}>Ничего не нашлось. Попробуйте изменить фильтр</p>)
+        : <GuitarList guitars={paginatedGuitars}/>}
+      {paginatedGuitars.length !== 0 && <Pagination totalPages={totalPages} activePage={activePage} setActivePage={setActivePage}/>}
     </div>
   );
 }

@@ -12,7 +12,7 @@
   background-image: url('../../assets/images/close.svg');
   background-repeat: no-repeat;
   background-color: transparent;
-  margin-right: 20px;
+  margin-right: 25px;
 
   &:hover {
     cursor: pointer;
@@ -21,6 +21,8 @@
 
 .img {
   margin-right: 62px;
+  width: 54px;
+  height: 130px;
 }
 
 .desc_wrapper {
@@ -73,6 +75,7 @@
   background-repeat: no-repeat;
   background-size: 8px 8px;
   background-position: 8px 10px;
+  transition: opacity 0.25s ease-out;
 
   &_minus {
     background-image: url('../../assets/images/minus.svg');
@@ -84,6 +87,11 @@
 
   &:hover {
     cursor: pointer;
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 

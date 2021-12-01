@@ -33,7 +33,7 @@
   max-width: 1020px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr minmax(698px, 1fr);
   grid-column-gap: 34px;
   padding: 0 40px 40px;
 }

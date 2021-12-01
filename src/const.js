@@ -31,6 +31,22 @@ export const GuitarString = {
   TWELVE: 12,
 };
 
+export const PromoCode = {
+  GITARAHIT: {
+    name: 'GITARAHIT',
+    discountPercent: 10,
+  },
+  SUPERGITARA: {
+    name: 'SUPERGITARA',
+    discount: 700,
+  },
+  GITARA2020: {
+    name: 'GITARA2020',
+    discount: 3000,
+    maxDiscountPercent: 30,
+  },
+};
+
 export const GUITARS_PER_PAGE = 9;
 
 export const DEFAULT_PAGE = 1;

@@ -1,4 +1,5 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
 import styles from './cart.module.scss';
 
 import Header from '../../header/header';
@@ -8,7 +9,11 @@ import CartList from '../../cart-list/cart-list';
 import Promo from '../../promo/promo';
 import Order from '../../order/order';
 
+import {getCart} from '../../../store/selectors';
+
 export default function Cart() {
+  const cart = useSelector(getCart);
+
   return (
     <div className={styles.wrapper}>
       <Header />
@@ -19,13 +24,15 @@ export default function Cart() {
           </h1>
           <Breadcrumbs isCart />
         </div>
-        <section className={styles.section}>
-          <CartList />
-          <div className={styles.promo_wrapper}>
-            <Promo />
-            <Order />
-          </div>
-        </section>
+        {cart.length > 0 ?
+          <section className={styles.section}>
+            <CartList/>
+            <div className={styles.promo_wrapper}>
+              <Promo/>
+              <Order/>
+            </div>
+          </section>
+          : <p className={styles.none}> Здесь пока ничего нет... </p>}
       </main>
       <Footer />
     </div>
