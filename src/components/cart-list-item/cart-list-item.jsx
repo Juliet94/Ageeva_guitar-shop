@@ -91,7 +91,7 @@ export default function CartListItem({cartItem}) {
           type="button"
           onClick={() => setIsModalOpen(true)}
         />
-        <img className={styles.img} src={img} alt="Гитара" />
+        <img className={styles.img} src={img} alt={`${type} ${name}`} />
         <div className={styles.desc_wrapper}>
           <h2 className={styles.heading}>
             {type} {name}

@@ -50,7 +50,7 @@ export default function GuitarListItem({guitarItem}) {
 
   return (
     <li className={styles.list_item}>
-      <img className={styles.img} src={img} alt="Гитара"/>
+      <img className={styles.img} src={img} alt={`${type} ${name}`}/>
       <div className={styles.wrapper}>
         <StarRatings
           rating={rating}
