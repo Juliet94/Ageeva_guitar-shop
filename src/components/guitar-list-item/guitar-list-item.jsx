@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {useDispatch} from 'react-redux';
+import {Link, generatePath} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import StarRatings from 'react-star-ratings';
 import cn from 'classnames';
@@ -9,7 +10,7 @@ import Popup from '../popup/popup';
 import PopupSuccess from '../popup-success/popup-success';
 
 import {getSpaces} from '../../utils';
-import {PopupType} from '../../const';
+import {PopupType, AppRoute} from '../../const';
 import {addToCart, increaseTotalPrice} from '../../store/actions';
 
 export default function GuitarListItem({guitarItem}) {
@@ -37,6 +38,7 @@ export default function GuitarListItem({guitarItem}) {
     vendorCode,
     type,
     strings,
+    id,
   } = guitarItem;
 
   const onAddButtonClick = () => {
@@ -70,12 +72,9 @@ export default function GuitarListItem({guitarItem}) {
         </span>
       </div>
       <div className={styles.wrapper_button}>
-        <button
-          className={cn(styles.button, styles.button_more)}
-          type="button"
-        >
+        <Link className={cn(styles.button, styles.button_more)} to={{pathname: generatePath(AppRoute.PRODUCTS, { id })}}>
           Подробнее
-        </button>
+        </Link>
         <button
           className={cn(styles.button, styles.button_buy)}
           type="button"
@@ -114,5 +113,6 @@ GuitarListItem.propTypes = {
     vendorCode: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     strings: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
   }).isRequired,
 };

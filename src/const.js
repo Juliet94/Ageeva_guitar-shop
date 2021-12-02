@@ -11,6 +11,10 @@ export const SortOrder = {
 export const AppRoute = {
   CATALOG: '/',
   CART: '/cart',
+  BUY: '/buy',
+  ABOUT: '/about',
+  SERVICE:  '/service',
+  PRODUCTS: '/products/:id',
 };
 
 export const PopupType = {

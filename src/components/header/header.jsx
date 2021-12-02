@@ -2,8 +2,8 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 import styles from './header.module.scss';
-import {AppRoute} from '../../const';
 
+import {AppRoute} from '../../const';
 import {getCart} from '../../store/selectors';
 
 import logo from '../../assets/images/logo-black.svg';
@@ -25,17 +25,17 @@ export default function Header() {
                 </Link>
               </li>
               <li className={styles.list_item}>
-                <Link to="/">
+                <Link to={AppRoute.BUY}>
                   Где купить?
                 </Link>
               </li>
               <li className={styles.list_item}>
-                <Link to="/">
+                <Link to={AppRoute.ABOUT}>
                   О компании
                 </Link>
               </li>
               <li className={styles.list_item}>
-                <Link to="/">
+                <Link to={AppRoute.SERVICE}>
                   Сервис-центры
                 </Link>
               </li>
