@@ -90,6 +90,7 @@ export default function CartListItem({cartItem}) {
           className={styles.button_close}
           type="button"
           onClick={() => setIsModalOpen(true)}
+          aria-label="Удалить товар"
         />
         <img className={styles.img} src={img} alt={`${type} ${name}`} />
         <div className={styles.desc_wrapper}>
@@ -115,8 +116,10 @@ export default function CartListItem({cartItem}) {
             className={cn(styles.button_quantity, styles.button_quantity_minus)}
             type="button"
             onClick={onMinusButtonClick}
+            aria-label="Уменьшить количество товара"
           />
           <label>
+            <span className="visually-hidden">Изменение количества товара</span>
             <input
               className={styles.quantity_input}
               type="text"
@@ -128,6 +131,7 @@ export default function CartListItem({cartItem}) {
             className={cn(styles.button_quantity, styles.button_quantity_plus)}
             type="button"
             onClick={onPlusButtonClick}
+            aria-label="Увеличить количество товара"
           />
         </div>
         <div className={styles.price_wrapper}>

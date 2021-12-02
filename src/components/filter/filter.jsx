@@ -143,6 +143,7 @@ export default function Filter() {
           </h3>
           <div className={styles.price_input_wrapper}>
             <label>
+              <span className="visually-hidden">Цена от</span>
               <input
                 className={styles.price_input}
                 type="text"
@@ -153,6 +154,7 @@ export default function Filter() {
               />
             </label>
             <label>
+              <span className="visually-hidden">Цена до</span>
               <input
                 className={styles.price_input}
                 type="text"
