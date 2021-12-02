@@ -1,7 +1,7 @@
 .list_item {
   position: relative;
-  width: 220px;
-  height: 304px;
+  min-width: 220px;
+  min-height: 304px;
   border: 1px solid var(--very-light-grey);
   display: flex;
   flex-direction: column;
@@ -29,6 +29,7 @@
 .wrapper_heading {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
@@ -67,6 +68,8 @@
 
   &_more {
     background-color: var(--grey);
+    text-align: center;
+    padding-top: 5px;
 
     &:hover {
       background-color: var(--slightly-light-grey);
