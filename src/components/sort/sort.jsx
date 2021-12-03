@@ -40,6 +40,7 @@ export default function Sort({activeSortType, setActiveSortType, activeSortOrder
               setActiveSortType(SortType.PRICE);
             }
           }}
+          aria-label="Отсортировать по возрастанию"
         />
         <button
           className={cn(styles.button, styles.button_down, activeSortOrder === SortOrder.DOWN && styles.button_down_active)}
@@ -50,6 +51,7 @@ export default function Sort({activeSortType, setActiveSortType, activeSortOrder
               setActiveSortType(SortType.PRICE);
             }
           }}
+          aria-label="Отсортировать по убыванию"
         />
       </div>
     </section>
