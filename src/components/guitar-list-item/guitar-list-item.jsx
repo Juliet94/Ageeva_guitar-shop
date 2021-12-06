@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {useState, useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 import {Link, generatePath} from 'react-router-dom';
@@ -22,10 +23,12 @@ export default function GuitarListItem({guitarItem}) {
   useEffect(() => {
     if (isModalOpen || isModalSuccessOpen) {
       document.body.style = 'overflow: hidden;';
+      console.log('Хоба!')
     }
 
-    if (!isModalOpen || !isModalSuccessOpen) {
+    if (!isModalOpen && !isModalSuccessOpen) {
       document.body.style = 'overflow: visible;';
+      console.log('Еще Хоба!')
     }
   }, [isModalOpen, isModalSuccessOpen]);
 
