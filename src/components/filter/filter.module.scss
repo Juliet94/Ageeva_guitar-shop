@@ -118,6 +118,9 @@
   }
 }
 
+.checkbox:focus + .text::before {
+  border-color: #000000;
+}
 
 .strings_wrapper {
   padding-top: 31px;

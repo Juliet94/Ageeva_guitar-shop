@@ -62,6 +62,7 @@ export default function Filter() {
 
     if (!price) {
       setPriceFrom('');
+      dispatch(changeFilterPriceFrom(''));
       return;
     }
 
@@ -72,8 +73,8 @@ export default function Filter() {
     }
 
     if (price >= maxPrice) {
-      setPriceTo(getSpaces(maxPrice));
-      dispatch(changeFilterPriceTo(maxPrice));
+      setPriceFrom(getSpaces(maxPrice));
+      dispatch(changeFilterPriceFrom(maxPrice));
       return;
     }
 
@@ -92,6 +93,7 @@ export default function Filter() {
 
     if (!price) {
       setPriceTo('');
+      dispatch(changeFilterPriceTo(''));
       return;
     }
 
@@ -102,8 +104,8 @@ export default function Filter() {
     }
 
     if (price <= minPrice) {
-      setPriceFrom(getSpaces(minPrice));
-      dispatch(changeFilterPriceFrom(minPrice));
+      setPriceTo(getSpaces(minPrice));
+      dispatch(changeFilterPriceTo(minPrice));
       return;
     }
 
@@ -147,7 +149,7 @@ export default function Filter() {
               <input
                 className={styles.price_input}
                 type="text"
-                placeholder={minPrice}
+                placeholder={getSpaces(minPrice)}
                 value={priceFrom}
                 onChange={onPriceFromChange}
                 onBlur={onPriceFromBlur}
@@ -158,7 +160,7 @@ export default function Filter() {
               <input
                 className={styles.price_input}
                 type="text"
-                placeholder={maxPrice}
+                placeholder={getSpaces(maxPrice)}
                 value={priceTo}
                 onChange={onPriceToChange}
                 onBlur={onPriceToBlur}
