@@ -26,7 +26,7 @@
   justify-content: space-between;
   max-width: 1020px;
   width: 100%;
-  padding: 60px 40px;
+  padding: 60px 40px 55px;
   color: #ffffff;
   font-size: 10px;
 }
@@ -34,7 +34,8 @@
 .logo_wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  max-width: 143px;
 }
 
 .img_logo {
@@ -48,15 +49,14 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 1px;
+  margin-top: 55px;
   min-width: 120px;
 }
 
 .icon {
   transition: opacity 0.25s ease-out;
-
-  &:not(:last-child) {
-    margin-right: 23px;
-  }
+  margin-right: 23px;
+  margin-bottom: 8px;
 
   &:hover {
     opacity: 0.5;
@@ -68,6 +68,7 @@
   justify-content: space-between;
   width: 440px;
   padding-top: 10px;
+  margin-left: -20px;
 }
 
 .info_wrapper {
