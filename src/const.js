@@ -14,6 +14,8 @@ export const AppRoute = {
   BUY: '/buy',
   ABOUT: '/about',
   SERVICE:  '/service',
+  LOCATION: '/location',
+  SEARCH: '/search',
   PRODUCTS: '/products/:id',
 };
 
